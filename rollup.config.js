@@ -1,6 +1,4 @@
 import svelte from 'rollup-plugin-svelte';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
 import pkg from './package.json';
 
 const name = pkg.name
@@ -15,7 +13,5 @@ export default {
 	],
 	plugins: [
 		svelte(),
-		resolve({ browser: true, dedupe: ['svelte', 'prismjs'], }),
-		commonjs(),
 	]
 };
